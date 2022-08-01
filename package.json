@@ -1,0 +1,36 @@
+{
+  "name": "movie-app",
+  "version": "1.0.0",
+  "description": "react boiler plate",
+  "main": "index.js",
+  "engine": {
+    "node": "16.16.0",
+    "npm": "8.11.0"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "backend": "nodemon server/index.js",
+    "frontend": "npm run start --prefix client",
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
+  },
+  "author": "minhyuk",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongoose": "^6.5.0",
+    "react-redux": "^5.0.7",
+    "saslprep": "^1.0.3",
+    "supports-color": "^7.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^2.0.19"
+  }
+}
