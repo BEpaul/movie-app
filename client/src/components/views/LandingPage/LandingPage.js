@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { FaCode } from "react-icons/fa";
 import { API_KEY, API_URL, IMAGE_BASE_URL } from '../../Config';
 import MainImage from './Sections/MainImage';
 import GridCards from '../commons/GridCards';
@@ -24,8 +23,8 @@ function LandingPage() {
         fetch(endpoint)
             .then(response => response.json())
             .then(response => {
-                console.log('...x', response.results);
-                console.log('...o', ...response.results);
+                // console.log('...x', response.results);
+                // console.log('...o', ...response.results);
                 setMovies([...Movies, ...response.results])
                 setMainMovieImage(response.results[0])
                 setCurrentPage(response.page)
