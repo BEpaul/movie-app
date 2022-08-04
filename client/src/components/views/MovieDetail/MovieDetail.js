@@ -19,7 +19,7 @@ function MovieDetail(props) {
     // DOM이 렌더링될 때 할 것을 넣어주면 됨
     useEffect(() => {
 
-        // let endpointCrew = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`
+        let endpointCrew = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`
 
         let endpointInfo = `${API_URL}movie/${movieId}?api_key=${API_KEY}`
 
@@ -28,6 +28,13 @@ function MovieDetail(props) {
             .then(response => {
                 console.log(response);
                 setMoive(response);
+            })
+
+
+        fetch(endpointCrew)
+            .then(response => response.json())
+            .then(response => {
+                console.log('responseForCrew',response);
             })
     }, [])
 
